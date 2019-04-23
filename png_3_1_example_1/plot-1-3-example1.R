@@ -31,12 +31,13 @@ vskewMean_k = matin_k[,6]
 
 ##--------------------------------------------------------------------------------------------------##
 #  general setup
-namepng = sprintf("output-2coins-meanPk-sdPk-skewPk-tmax%04d.png", tmax )
+namepng = sprintf("output-2coins-meanPk-sdPk-skewPk-tmax%04d-example1.png", tmax )
 png( namepng, width=900, height=300 )
 
 
 par( mfrow=c(1,3) )
-par( mar = c(0, 2, 0, 1), oma = c(2, 2, 0.5, 0.5) )  #c(b,l,t,r)
+par( mar = c(0, 2, 0, 1), oma = c(4, 2, 0.5, 0.5) )  #c(b,l,t,r)
+#par( mar = c(0, 2, 0, 5), oma = c(4, 1, 0.5, 0.1) ) #c(b,l,t,r)
 ##------------------------------------------------------------##
 
 
@@ -58,12 +59,16 @@ atx    = axTicks(1)
 myatx  = seq(min(atx),max(atx),1)
 labels = sapply( myatx, function(i) as.expression(bquote(2^ .(i)) ) )
 axis(1,at=myatx,labels=labels, cex.axis=1.5 , font.axis=2, tcl=0.6 ) # 2 means bold
+mtext(side=1,line=2.6,cex=1.0,font=1, bquote( 'Memory range T' ) )
+
 
 aty = axTicks(2)  
 axis(2, at=aty, labels=aty, cex.axis=1.5, font.axis=1, tcl=0.5)
 
 legend('topleft', cex=1.5, col=c('red','blue'), pch=c(8,16), bty="n", ncol=1,
                      legend=c( "H coin","K coin" ) )
+
+
 ##------------------------------------------------------------##
 
 
@@ -85,6 +90,8 @@ atx    = axTicks(1) #print( atx )
 myatx  = seq(min(atx),max(atx),1)
 labels = sapply( myatx, function(i) as.expression(bquote(2^ .(i)) ) )
 axis(1,at=myatx,labels=labels, cex.axis=1.5 , font.axis=2, tcl=0.6 ) # 2 means bold
+mtext(side=1,line=2.6,cex=1.0,font=1, bquote( 'Memory range T' ) )
+
 
 
 aty = axTicks(2)  
@@ -115,6 +122,8 @@ atx    = axTicks(1) #print( atx )
 myatx  = seq(min(atx),max(atx),1)
 labels = sapply( myatx, function(i) as.expression(bquote(2^ .(i)) ) )
 axis(1,at=myatx,labels=labels, cex.axis=1.5 , font.axis=2, tcl=0.6 ) # 2 means bold
+mtext(side=1,line=2.6,cex=1.0,font=1, bquote( 'Memory range T' ) )
+
 
 aty = axTicks(2)  
 axis(2, at=aty, labels=aty, cex.axis=1.5, font.axis=1, tcl=0.5)
@@ -126,4 +135,3 @@ legend('topleft', cex=1.5, col=c('red','blue'), pch=c(8,16), bty="n", ncol=1,
 ##--------------------------------------------------------------------------------------------------##
 dev.off()  # END
 ##--------------------------------------------------------------------------------------------------##
-
