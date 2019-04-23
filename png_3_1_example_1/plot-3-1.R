@@ -31,8 +31,7 @@ vskewMean_k = matin_k[,6]
 
 ##--------------------------------------------------------------------------------------------------##
 #  general setup
-posname = sprintf("-theta045-gam090-tau4096-tmax%04d-allsamp",tmax ) 
-namepng = sprintf("netw-2coin-degree-mean-sd-skew-eqw-%s.png", posname )
+namepng = sprintf("output-2coins-meanPk-sdPk-skewPk-tmax%04d.png", tmax )
 png( namepng, width=900, height=300 )
 
 
