@@ -64,6 +64,7 @@ par( mar = c(0, 2, 0, 5), oma = c(4, 1, 0.5, 0.1) ) #c(b,l,t,r)
 ylim = range( c(vnvertMean_h,vnvertMean_h)  ) 
 log2T = log2( vecT )
 
+# plot(1:2,1:2,type='n',axes=F, ann=F) 
 plot(  log2T, vnvertMean_h, col="blue", lty=1, pch=0, type="o", cex=2.1, xlab="", ylab="", ylim=ylim, xaxt="n", yaxt="n" )
 lines( log2T, vnvertMean_k, col="blue", lty=2, pch=1, type="o", cex=2.1, xlab="", ylab="")
 mtext( side=2,line=-2.3,cex=1.0,font=1, bquote( 'Number of vertices' ) ,  col="blue" )
